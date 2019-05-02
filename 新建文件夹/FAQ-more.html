@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FAQ</title>
+	<link rel="stylesheet" href="css/FQA-more.css">
+</head>
+<body>
+	<div class="wrapout">
+		<div class="wrap">
+			<!-- first -->
+			<div class="nav">
+				<img src="img/logo.png" alt="" class="logo">
+				<span><a href="homepage.html">Home</a></span>
+				<span><a href="secondary-page.html">Products</a></span>
+				<span><a href="about-us.html">About us</a></span>
+				<span><a href="certifications.html">Certifications</a></span>
+				<span><a href="news.html">News</a></span>
+				<span><a href="FAQ.html" class="active">FAQ</a></span>
+				<span><a href="contact.html">Contact</a></span>
+			</div>
+			<!-- second -->
+			<div class="header-pt"></div>
+			<div class="products">
+				
+				<div class="pd-right">
+					<div class="pd-nav">
+						<span style="margin-left: 650px;"> <img src="img/home.png" alt="">  </span>
+						<span><a href="homepage.html">Home</a></span>
+						<span>/</span>
+						<span><a href="FAQ.html">FAQ</a></span>
+					</div>
+					<hr style="height:8px; background-color: skyblue; border: none; margin-top: 2px;">
+					<div class="faq">
+						<h1>Our company’s reputation has been built on  </h1>
+						<b>Our company’s reputation has been built on   <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019-3-20</span></b>
+						<p>Our company’s reputation has been built on Quality, Safety and Service. In all markets safety is critical, and this starts with a quality product backed by a reliable company. All the products are produced under strict standard of quality control, and constant research and development ensuring that you will get the latest.... </p>
+						<img src="img/3.png" alt="">
+						<p>Our company’s reputation has been built on Quality, Safety and Service. In all markets safety is critical, and this starts with a quality product backed by a reliable company. All the products are produced under strict standard of quality control, and constant research and development ensuring that you will get the latest.... </p>
+						<p>Our company’s reputation has been built on Quality, Safety and Service. In all markets safety is critical, and this starts with a quality product backed by a reliable company. All the products are produced under strict standard of quality control, and constant research and development ensuring that you will get the latest.... </p>
+					</div>
+					
+				</div>
+			</div>
+			
+			<div class="footer">
+				<div class="ft-nav">
+					<span><a href="homepage.html">Home</a></span>
+					<span><a href="secondary-page.html">Products</a></span>
+					<span><a href="about-us.html">About us</a></span>
+					<span><a href="certifications.html">Certifications</a></span>
+					<span><a href="news.html">News</a></span>
+					<span><a href="FAQ.html">FAQ</a></span>
+					<span><a href="contact.html">Contact</a></span>
+					<ul class="link">
+						<li>Link Exchange</li>
+						<li>Main products</li>
+						<li>Latest Products</li>
+						<li>Information Centres</li>
+						<li>Contact us</li>
+					</ul>
+				</div>
+				<ul class="contack">
+					<li>Contact</li>
+					<li><img src="img/e-mail.png" alt="">@tlstainless.com</li>
+					<li><img src="img/place.png" alt="">Beijing Tianlang Intelligence Vally Technology Co.,Ltd</li>
+					<li><img src="img/api.png" alt="">www.TLStainless.com </li>
+					<li>
+						<span><a href=""><img src="img/FaceBook.png" alt=""></a></span>
+						<span><a href=""><img src="img/google.png" alt=""></a></span>
+						<span><a href=""><img src="img/tt.png" alt=""></a></span>
+						<span><a href=""><img src="img/wifi.png" alt=""></a></span>
+						<span><a href=""><img src="img/skype.png" alt=""></a></span>
+					</li>
+				</ul>
+
+			</div>
+			<div class="copy">Copyright@Beijing Tianlang Intelligence Vally Technology Co.,Lt</div>
+			<div id="btn"></div>
+		</div>
+	</div>
+</body>
+</html>
+<script>
+
+   window.onload=function(){
+     var btn=document.getElementById('btn');
+     var bSys=true;
+     var timer=null;
+     var con=document.getElementsByClassName('.wrapout');
+     //检测用户是否拖动了滚动条
+     window.onscroll=function(){
+         if(!bSys){
+             clearInterval(timer)
+             }
+           bSys=false;
+         }
+     //用户点击了返回顶部
+     btn.onclick=function(){
+          timer=setInterval(
+            function(){
+                //顶部距离
+                 var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+                 var iSpeed=Math.floor(-scrollTop/8);
+                 //如果滚动到了顶部，清除定时器
+                 if(scrollTop==0){
+                      clearInterval(timer)
+                     }
+                 bSys=true
+                 document.documentElement.scrollTop=document.body.scrollTop=scrollTop+iSpeed;
+                
+                },
+            30
+          
+          )
+         
+         }
+   }
+</script>
